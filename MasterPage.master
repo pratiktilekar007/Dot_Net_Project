@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>www.sonuicecream.com</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+        <link href="style.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+
+    <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.aspx">Sonu<span class="logo_colour">_ice creams</span></a></h1>
+          <h2>The ice cream shop.</h2>
+        </div>
+
+       <div id="login" style="padding-left:905px; padding-top:45px;" ">
+       <table border="2" bgcolor="white" > 
+       <tr> 
+       <td> 
+          <asp:LinkButton  class="a" ID="LbLogin" runat="server" onclick="LbLogin_Click" 
+              EnableTheming="True">Log In</asp:LinkButton>
+              <asp:LinkButton class="a" ID="LbLogout" runat="server" onclick="LbLogout_Click">Log Out</asp:LinkButton>
+       </td> 
+       
+       <td> 
+        <a class="a" href="registration.aspx">sign Up</a>
+       </td>
+       </tr>
+        </table>
+ </div>
+         
+ </div>
+    
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li ><a href="index.aspx">Home</a></li>
+          <li><a href="about.aspx">About us</a></li>
+          <li><a href="product.aspx">Product</a></li>
+          <li><a href="offer.aspx">Offers</a></li>
+           <li><a href="contact.aspx">contact us</a></li>
+          <li><a href="registration.aspx">Registration</a></li>
+           <li><a href="adminlogin.aspx">Admin login</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+
+    <div id="footer">
+     || Copyright &copy; Sonu ice_creams || 
+        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/adminlogin.aspx">For Admin Login</asp:HyperLink>
+    </div>
+  </div>
+
+    </div>
+    </form>
+</body>
+</html>
